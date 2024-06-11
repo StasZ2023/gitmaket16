@@ -598,12 +598,14 @@
   margin: 0;
   box-sizing: border-box; }
 
-body {
+.body {
   font-family: 'TT Lakes', sans-serif;
   background-color: #F8F8F8;
   color: #000;
   overflow-x: hidden;
   overflow-y: scroll; }
+  .body.scroll {
+    overflow-y: hidden; }
 
 .circle-pn {
   width: 40px;
@@ -767,7 +769,7 @@ body {
   .header__link--none {
     display: flex; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .header {
     background-color: transparent; }
     .header__item-index {
@@ -805,7 +807,8 @@ body {
     background-color: #fff;
     transform: translateX(-100%);
     opacity: 0;
-    transition: all .5s ease; }
+    transition: all .5s ease;
+    overflow-y: scroll; }
     .menu__list {
       margin-top: 100px; }
     .menu__item {
@@ -875,7 +878,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50%; }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .menu {
     position: fixed;
     transform: translateX(0);
@@ -942,7 +945,8 @@ body {
     color: #7E7E82;
     padding: 8px 10px 8px 16px;
     border-radius: 5px;
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+    transition: all .5s ease; }
     .services__link:hover {
       border: 2px solid #B8FFEC;
       background-color: #fff; }
@@ -984,13 +988,16 @@ body {
     width: calc(360px + 10vw);
     border-radius: 10px; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .services {
     margin-left: 320px;
     position: relative;
     top: -90px; }
     .services__scroll {
-      overflow: hidden; } }
+      overflow: hidden; }
+    .services__list {
+      width: auto;
+      flex-wrap: wrap; } }
 
 @media screen and (min-width: 320px) {
   .brands .repair {
@@ -1020,6 +1027,8 @@ body {
     padding: 0 16px;
     transition: all 0.5s ease;
     border-radius: 6px; }
+    .brands .link:hover {
+      transform: scale(1.1); }
     .brands .link__img {
       width: 108px;
       height: 32px; }
@@ -1111,7 +1120,7 @@ body {
     border-top: 2px solid #41F6D7;
     top: 55%; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .brands {
     margin-left: 320px; }
     .brands .slider__items {
@@ -1141,7 +1150,10 @@ body {
     justify-content: space-between;
     padding: 0 16px;
     margin-right: 16px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    transition: all .5s ease; }
+    .types .link:hover {
+      transform: scale(1.1); }
     .types .link__text {
       margin-top: 16px;
       font-weight: 500; }
@@ -1209,7 +1221,7 @@ body {
   .types .all {
     display: block; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .types {
     margin-left: 320px; }
     .types__slider {
@@ -1269,7 +1281,10 @@ body {
       padding-right: 30px;
       border-radius: 16px;
       position: relative;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      transition: all .5s ease; }
+      .price__col-button:hover {
+        transform: scale(1.1); }
       .price__col-button:after {
         content: '';
         width: 5px;
@@ -1344,7 +1359,7 @@ body {
     margin-right: 15px;
     display: inline-block; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .price {
     margin-left: 320px; }
     .price__col:nth-child(1)::before, .price__col:nth-child(2)::before, .price__col:nth-child(3)::before {
@@ -1384,7 +1399,7 @@ body {
     .footer .copy__item:nth-child(3) {
       text-align: right; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .footer {
     margin-left: 320px; } }
 
@@ -1489,7 +1504,7 @@ body {
   .connection {
     width: 320px; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .connection {
     width: 520px; }
     .connection__btn {
@@ -1595,7 +1610,7 @@ body {
   .dell {
     width: 320px; } }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
   .dell {
     width: 520px; }
     .dell__btn {
