@@ -1,0 +1,199 @@
+$fon:#fff;
+@media screen and (min-width:320px) {
+    .header{
+        background-color:$fon;
+        &__list{
+          display: flex;
+          list-style-type: none;
+          padding:24px 16px;
+          display: flex;
+          justify-content: space-between;
+        }
+        &__item{
+          display: flex;
+          // justify-content: center;
+          // align-items: center;
+        }
+        &__item-index{
+            position: relative;
+            z-index: 5;
+        }
+        .burger{
+          border:0;
+          position: relative;
+          cursor: pointer;
+          
+          &__stripe{
+            height:2px;
+            background-color: $fon;
+            border-radius: 5px;
+            position: absolute;
+            left:10px;
+            transition: all .5s ease;
+          }
+          &__stripe:nth-child(1){
+            width:18px;
+            transform: translateY(-7px);
+          }
+          &__stripe:nth-child(2){
+            width:10px;
+          }
+          &__stripe:nth-child(3){
+            width:14px;
+            transform:translateY(7px)
+          }
+          &.open__burger .burger__stripe:nth-child(2){
+            opacity:0;
+          }
+          &.open__burger .burger__stripe:nth-child(1){
+            width:21px;
+            transform: rotate(45deg);
+          }
+          &.open__burger .burger__stripe:nth-child(3){
+            width:21px;
+            transform: rotate(-45deg);
+          }
+        }
+        
+        .burger__none{
+          display: none;
+        }
+        
+        &__cps{
+          width:95px;
+          margin-left:16px;
+          margin-right: 4vw;
+          
+        }
+        &__search{
+          opacity: 0;
+          animation: ani 1s forwards;
+          background-image: url(../img/search.svg);
+          background-repeat: no-repeat;
+          background-position: 50%;
+          display: none;
+          position: fixed;
+          right:20px;
+        }
+        .open__search{
+            width:320px;
+        }
+        &__item.open__search .header__search{
+          display: block;
+        }
+        &__item-none{
+            display: none;
+            
+        }
+        &__line::before{
+          content:'';
+          width:2px;
+          height:32px;
+          background-color:#EAEAEA;
+          display: block;
+          margin-left:-65px;
+          margin-top:5px;
+        }
+        &__link{
+          width:60px;
+          display: flex;
+          justify-content: space-around;
+          opacity: 0;
+          animation: ani 1s forwards;
+        }
+        
+        &__link--none{
+          display: none;
+        }
+        &__setti-text{
+          display: none;
+        }
+        .img-repair{
+          background-image: url('../img/repair.svg');
+          background-repeat: no-repeat;
+          background-position: 50%;
+        }
+        .img-icon{
+          background-image: url('../img/icon.svg');
+          background-repeat: no-repeat;
+          background-position: 50%;
+        }
+      }
+}
+
+@media screen and (min-width:768px) {
+
+    .header{
+            .open__search{
+                width:320px;
+            }
+        &__decorative{
+            width:2px;
+          height:32px;
+          background-color:#EAEAEA;
+          display: block;
+          margin-left:20px;
+          margin-top:5px;
+        }
+        &__decorative--none{
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        &__search{
+            position: static;
+          }
+          &__item .contact{
+            position: absolute;
+            display: flex;
+            right: 150px;
+          }
+        &__item-none{
+            display: flex;
+        }
+        &__link--none{
+            display:flex;
+          }
+    }
+}
+@media screen and (min-width:1280px) {
+              .header{
+                background-color: transparent;
+                &__item-index{
+                  position: fixed;
+                  justify-content: space-between;
+                  width: 280px;
+                }
+                &__search{
+                  display: block;
+                }
+                &__decorative{
+                  display: none;
+                }
+                &__line::before{
+                  display: none;
+                }
+                &__link{
+                  width: 400px;
+                  z-index: 2;
+                }
+                &__setti-text{
+                  display: block;
+                }
+                .contact{
+                  display: none;
+                }
+                &__setti{
+                  display: flex;
+                  align-items: center;
+                   .circle-pn{
+                    margin-left:10px;
+                   }
+                }
+              }
+              .burger{
+                display: none;
+              }
+}
+
+
+ 
