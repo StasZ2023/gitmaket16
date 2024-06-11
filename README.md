@@ -1,3 +1,5 @@
+https://github.com/StasZ2023/gitmaket16/blob/main/dist/index.html
+
 # Webpack Static Site Starter Kit
 
 ## Требования к проекту
